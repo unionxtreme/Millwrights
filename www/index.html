@@ -6,11 +6,9 @@
         <title>
         </title>
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/my.css" />
         <style>
             /* App custom styles */
         </style>
-        <script type="application/javascript" src="js/my.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
     </head>
@@ -175,17 +173,19 @@
 			<form id="area_calc_form"  action="/">
 				<div data-role="fieldcontain">
 					<label for="sq_centimeters">sq. centimeters:</label>
-					<input type="number" id="sq_centimeters" multiplier="1" class="input" name="sq_centimeters">
+					<input type="number" id="sq_centimeters" multiplier="1" class="input" name="sq_centimeters" data-mini="true">
+					<label for="sq_meters">sq. meters: </label>
+					<input type="number" id="sq_meters" multiplier="10000" class="input" name="sq_meters" data-mini="true">
 				</div>
 
 				<div data-role="fieldcontain" >
 					<label for="sq_meters">sq. meters: </label>
-					<input type="number" id="sq_meters" multiplier="10000" class="input" name="sq_meters">
+					<input type="number" id="sq_meters" multiplier="10000" class="input" name="sq_meters" data-mini="true">
 				</div>
 
 				<div data-role="fieldcontain" >
 					<label for="hectares">hectare: </label>
-					<input type="number" id="hectares" multiplier="100000000" class="input" name="hectares">
+					<input type="number" id="hectares" multiplier="100000000" class="input" name="hectares" data-mini="true">
 				</div>
 
 				<div data-role="fieldcontain" >
@@ -600,7 +600,7 @@
 		</div>
 
         <!-- Hand Signals -->
-        <div data-role="page" id="page8">
+        <div data-role="page" data-theme="a" id="page8">
             <div data-theme="a" data-role="header">
 			<a href="#page1" data-icon="home">Home</a>
                 <h3>
@@ -713,7 +713,6 @@
                     Overhead Conveyor
                 </h3>
             </div>
-			
 				<div class="ad_container">
 						<div class="ad_container_script">
 							<script type="text/javascript"><!--
@@ -728,24 +727,25 @@
 							<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 							</script>
 						</div>
-				</div>		
-            <div data-role="content" style="padding: 15px">
-                <ul data-role="listview" data-divider-theme="e" data-inset="true">
-                    <li data-theme="a">
-                        <a href="#page11" data-transition="slide">
-                            Cross Brace
-                        </a>
-                    </li>
-                    <li data-theme="a">
-                        <a href="#page12" data-transition="slide">
-                            Dip Plug
-                        </a>
-                    </li>
-                </ul>
-            </div>
+				</div>
+	
+						<div data-role="content" style="padding: 15px">
+							<ul data-role="listview" data-divider-theme="e" data-inset="true">
+								<li data-theme="a">
+									<a href="#page11" data-transition="slide">
+										Cross Brace
+									</a>
+								</li>
+								<li data-theme="a">
+									<a href="#page12" data-transition="slide">
+										Dip Plug
+									</a>
+								</li>
+							</ul>
+						</div>
         </div>
         <!-- Cross Brace -->
-        <div data-role="page" id="page11" >
+        <div data-role="page" data-theme="a" id="page11" >
             <div data-theme="a" data-role="header">
 			<a href="#page1" data-icon="home">Home</a>
                 <h3>
@@ -756,7 +756,7 @@
             </div>
         </div>
         <!-- Dip Plug -->
-        <div data-role="page" id="page12" >
+        <div data-role="page" data-theme="a" id="page12" >
             <div data-theme="a" data-role="header">
 			<a href="index.html" data-icon="home">Home</a>
                 <h3>
@@ -891,7 +891,7 @@
             </div>
         </div>
         <!-- Starrett Drill Tap -->
-        <div data-role="page" id="page19">
+        <div data-role="page" data-theme="a" id="page19">
             <div data-theme="a" data-role="header">
 				<a href="index.html" data-icon="home">Home</a>
                 <h3>
@@ -907,7 +907,7 @@
         <!-- Metric Torque Charts -->
         <div data-role="page" id="page18">
             <div data-theme="a" data-role="header">
-				<a href="index.html" data-icon="home">Home</a>
+				<a href="#page1" data-icon="home">Home</a>
                 <h3>
                     Metric
                 </h3>
